@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Verdana;
+}
+
+#submitButton{
+  background-color: #b3d4ff;
+  border-color: #005f61;
+  border-radius: 5px;
+}
