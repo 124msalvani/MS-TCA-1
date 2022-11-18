@@ -1,33 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8" />
+	<title>Postcard Generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans:300,400|Oswald:700" />
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <label id="aLabel"></label>Side A<br>
-  <input type="text" id="aTextBox"><br>
-  <label id="bLabel"></label>Side B<br>
-  <input type="text" id="bTextBox"><br>
-  <label id="cLabel"></label><br>
-  <button type="button" id="submitButton">Submit</button><br>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+	<div class="outer-wrapper">
+		<div class="content-wrapper">
+			<header>
+				<h1>Postcard Generator</h1>
+				<p class="subtitle">Generate Postcards of All 50 American States</p>
+			</header>
+			<main role="main">
+				<div class="first step">
+					<h2>1. Choose a State</h2>
+					<select onchange="changePostcard()" name="states" id="states">
+						<option selected disabled value="empty-state">United States of America</option>
+						<option value="al">Alabama</option>
+						<option value="ak">Alaska</option>
+						<option value="az">Arizona</option>
+						<option value="ar">Arkansas</option>
+						<option value="ca">California</option>
+						<option value="co">Colorado</option>
+						<option value="ct">Connecticut</option>
+						<option value="de">Delaware</option>
+						<option value="dc">District of Columbia</option>
+						<option value="fl">Florida</option>
+						<option value="ga">Georgia</option>
+						<option value="hi">Hawaii</option>
+						<option value="id">Idaho</option>
+						<option value="il">Illinois</option>
+						<option value="in">Indiana</option>
+						<option value="ia">Iowa</option>
+						<option value="ks">Kansas</option>
+						<option value="ky">Kentucky</option>
+						<option value="la">Louisiana</option>
+						<option value="me">Maine</option>
+						<option value="md">Maryland</option>
+						<option value="ma">Massachusetts</option>
+						<option value="mi">Michigan</option>
+						<option value="mn">Minnesota</option>
+						<option value="ms">Mississippi</option>
+						<option value="mo">Missouri</option>
+						<option value="mt">Montana</option>
+						<option value="ne">Nebraska</option>
+						<option value="nv">Nevada</option>
+						<option value="nh">New Hampshire</option>
+						<option value="nj">New Jersey</option>
+						<option value="nm">New Mexico</option>
+						<option value="ny">New York</option>
+						<option value="nc">North Carolina</option>
+						<option value="nd">North Dakota</option>
+						<option value="oh">Ohio</option>
+						<option value="ok">Oklahoma</option>
+						<option value="or">Oregon</option>
+						<option value="pa">Pennsylvania</option>
+						<option value="ri">Rhode Island</option>
+						<option value="sc">South Carolina</option>
+						<option value="sd">South Dakota</option>
+						<option value="tn">Tennessee</option>
+						<option value="tx">Texas</option>
+						<option value="ut">Utah</option>
+						<option value="vt">Vermont</option>
+						<option value="va">Virginia</option>
+						<option value="wa">Washington</option>
+						<option value="wv">West Virginia</option>
+						<option value="wi">Wisconsin</option>
+						<option value="wy">Wyoming</option>
+					</select>
+				</div>
+				<div class="second step">
+					<h2>2. Enjoy Your Postcard!</h2>
+					<div id="postcard">
+						<p id="greeting">To Generate a Postcard</p>
+						<p id="state-heading">Choose a state</p>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+	<footer>
+		<p>Made in NY <br />Copyright © Postcard Generator</p>
+	</footer>
+<script src="script.js"></script>
 </body>
 
 </html>
